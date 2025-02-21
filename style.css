@@ -1,0 +1,298 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Visby CF regular";
+  src: url(assets/Visby/VisbyCF-Regular.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Visby CF bold";
+  src: url(assets/Visby/VisbyCF-Bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Visby CF demibold";
+  src: url(assets/Visby/VisbyCF-DemiBold.otf) format(opentype);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Visby CF medium";
+  src: url(assets/Visby/VisbyCF-Medium.otf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Visby CF heavy";
+  src: url(assets/Visby/VisbyCF-Heavy.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+#header {
+  width: 100%;
+  overflow: hidden; /* Evita margens extras */
+  position: relative;
+  background-color: #003ae2;
+  /* border: 2px solid red; */
+}
+
+#header-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.mb-top-header {
+  position: absolute;
+  /* border: 2px solid red; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  /* display: flex;
+  justify-content: space-between;
+  border: 2px solid yellow;
+  padding: 20px 40px; */
+}
+
+.navbar {
+  height: 1rem;
+}
+
+.menu {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0rem;
+  top: 60px;
+  width: 100%;
+  background: rgba(0, 153, 255, 0.9);
+  border-radius: 10px;
+  transition: height 0.2s ease-in-out;
+}
+
+.menu.open {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+.menu li {
+  padding: 3px;
+  border-radius: 10px;
+  /* margin: 3px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  list-style: none;
+  width: 100%;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
+  font-family: "Visby CF regular";
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* border: 2px solid blueviolet; */
+}
+
+.menu-item:hover {
+  color: #0099ff;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.scieduc-logo .icon {
+  width: 85px;
+  height: 20px;
+}
+
+.toggle-menu svg {
+  height: 20px;
+  width: 20px;
+  /* border: 2px solid yellow; */
+}
+
+#about {
+  background-color: #003ae2;
+}
+
+.slogan {
+  font-family: "Visby CF regular";
+  font-weight: lighter;
+  color: #ffff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 30px 0px;
+  opacity: 0.9;
+  /* border: 2px solid red; */
+}
+
+.hl-bold {
+  font-family: "Visby CF bold";
+}
+
+.statistics-ilustration {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+  /* border: 2px solid red; */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.stats {
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hl-number {
+  font-family: "Visby CF demibold";
+  color: #ffff;
+  font-size: 1rem;
+}
+
+.info {
+  font-family: "Visby CF medium";
+  font-size: 8px;
+  color: #ffff;
+  /* border: 2px solid white; */
+}
+
+.line {
+  margin: 0px 10px;
+  /* border: 2px solid white; */
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 35px 40px 0px 40px;
+}
+
+.meeting-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+h1,
+h2 {
+  font-family: "Visby CF demibold";
+  color: #0099ff;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.default-paragraph {
+  font-family: "Visby CF regular";
+  font-size: 14px;
+  line-height: 1.45;
+  color: #ffff;
+  text-align: center;
+  opacity: 0.8;
+  padding: 10px 0px;
+  /* padding: 5px 50px; */
+  /* border: 2px solid red; */
+}
+
+.swiper-container {
+  width: 100%;
+  /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+.swiper-slide {
+  /* width: 100px; */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px;
+  padding: 0px 40px;
+  /* border: 2px solid red; */
+  height: auto;
+}
+
+.carousel-logo {
+  width: 80px;
+  height: 80px;
+  /* border: 2px solid yellow; */
+}
+
+.carousel-title {
+  font-family: "Visby CF demibold";
+  color: #ffff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* Espaço entre os elementos */
+}
+
+.arrow-svg {
+  width: 8px; /* Ajuste o tamanho da seta */
+  height: 8px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 360px) {
+  .hl-number {
+    font-size: 14px;
+  }
+  .stats {
+    gap: 7px;
+  }
+  .info {
+    font-size: 7px;
+  }
+}
