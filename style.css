@@ -514,7 +514,7 @@ footer {
   }
 }
 /* Ajuste para dispositivos pequenos como iPhone SE */
-@media (max-width: 375px) {
+@media (max-width: 370px) {
   swiper-container {
     width: 100%;
     height: auto;
