@@ -357,7 +357,7 @@ h5 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px;
+  padding: 40px;
   /* border: 2px solid red; */
 }
 
@@ -377,7 +377,7 @@ swiper-slide {
 }
 
 .album-item {
-  object-fit: contain;
+  object-fit: cover;
   width: 100% !important;
   max-width: 100%;
   height: auto;
