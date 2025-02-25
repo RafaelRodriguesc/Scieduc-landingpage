@@ -367,32 +367,49 @@ swiper-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  /* border: 2px solid red; */
+  position: relative;
+}
+
+swiper-wrapper {
+  display: flex;
+  width: 100%;
 }
 
 swiper-slide {
   display: flex;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
-  margin: 0px auto;
-  /* padding: 0 10px; */
-  width: 100%;
+  margin: 0 10px; /* Ajuste do espaçamento entre os slides */
+  width: calc(50% - 10px); /* Exibe dois slides por vez */
+  position: relative;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1; /* Define a ordem dos slides */
 }
 
 .album-item {
   object-fit: contain;
-  width: 100% !important;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 10px;
 }
+
+swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.8); /* Dá o efeito de "redução" nas imagens laterais */
+  z-index: 0; /* Coloca as imagens não ativas "atrás" */
+}
+
+swiper-slide.swiper-slide-active {
+  transform: scale(1); /* Aumenta a imagem ativa */
+  z-index: 2; /* Coloca a imagem ativa "na frente" */
+}
+
 swiper-slide:not(.swiper-slide-active) img {
-  filter: brightness(50%); /* Deixa as imagens laterais mais escuras */
+  filter: brightness(50%);
   transition: filter 0.3s ease-in-out;
 }
 
 swiper-slide.swiper-slide-active img {
-  filter: brightness(100%); /* Mantém a imagem ativa normal */
+  filter: brightness(100%);
 }
 
 .contact-form {
