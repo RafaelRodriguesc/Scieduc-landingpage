@@ -352,41 +352,32 @@ h5 {
   flex-shrink: 0;
 }
 
-.album-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 40px;
-}
-
-swiper-container {
-  width: 90%;
-  height: auto;
-  display: flex;
-  justify-content: center !important;
-  align-items: center !important;
-  /* border: 2px solid red; */
-}
-
-swiper-slide {
-  width: 100% !important;
-  margin: 0px auto !important;
-}
-
 .album-item {
   object-fit: contain;
-  width: 100% !important;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
+
+/* Efeito de redução nas imagens laterais */
+swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.85); /* Reduz o tamanho das imagens laterais */
+  z-index: 0; /* Coloca as imagens não ativas atrás */
+}
+
+swiper-slide.swiper-slide-active {
+  transform: scale(1); /* Aumenta a imagem ativa */
+  z-index: 2; /* Coloca a imagem ativa na frente */
+}
+
 swiper-slide:not(.swiper-slide-active) img {
-  filter: brightness(50%); /* Deixa as imagens laterais mais escuras */
+  filter: brightness(50%); /* Diminuí o brilho das imagens laterais */
   transition: filter 0.3s ease-in-out;
 }
 
 swiper-slide.swiper-slide-active img {
-  filter: brightness(100%); /* Mantém a imagem ativa normal */
+  filter: brightness(100%); /* Imagem ativa com brilho normal */
 }
 
 .contact-form {
@@ -509,5 +500,28 @@ footer {
   }
   .description-box {
     padding: 0px 10px;
+  }
+}
+/* Ajuste para dispositivos pequenos como iPhone SE */
+@media (max-width: 375px) {
+  swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide {
+    width: 90%; /* Ajusta a largura dos slides para 90% da tela */
+    margin: 0 5%; /* Ajusta as margens para permitir o empilhamento */
+  }
+
+  .album-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Maior redução das imagens laterais no iPhone SE */
+  swiper-slide:not(.swiper-slide-active) {
+    transform: scale(0.75); /* Imagens laterais menores no iPhone SE */
   }
 }
