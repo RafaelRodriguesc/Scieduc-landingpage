@@ -357,7 +357,8 @@ h5 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 40px;
+  padding: 0px 40px;
+  margin-top: 40px;
   box-sizing: border-box;
 }
 
