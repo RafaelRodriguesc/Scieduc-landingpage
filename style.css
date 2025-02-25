@@ -52,6 +52,7 @@ body {
   width: 100%;
   height: auto;
   display: block; /* Remove espaço extra abaixo da imagem */
+  object-fit: contain;
 }
 
 .mb-top-header {
@@ -369,9 +370,17 @@ swiper-container {
   /* border: 2px solid red; */
 }
 
+swiper-slide {
+  width: 90% !important;
+  max-width: 350px; /* Isso evita que fiquem muito pequenos */
+  margin: 0 auto !important;
+}
+
 .album-item {
   object-fit: contain;
   width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 swiper-slide:not(.swiper-slide-active) img {
   filter: brightness(50%); /* Deixa as imagens laterais mais escuras */
