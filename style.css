@@ -365,20 +365,20 @@ swiper-container {
   width: 80%;
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
   /* border: 2px solid red; */
 }
 
 swiper-slide {
-  width: 90% !important;
+  width: 100% !important;
   max-width: 350px; /* Isso evita que fiquem muito pequenos */
   margin: 0 auto !important;
 }
 
 .album-item {
   object-fit: contain;
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
   height: auto;
 }
