@@ -367,7 +367,7 @@ swiper-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* border: 2px solid red; */
 }
 
@@ -376,7 +376,7 @@ swiper-slide {
   justify-self: center;
   align-items: center;
   margin: 0px auto;
-  padding: 0 20px;
+  /* padding: 0 10px; */
   width: 100%;
 }
 
