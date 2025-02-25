@@ -3,6 +3,11 @@
   margin: 0px;
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden;
+  background-color: #003ae2;
+}
 
 @font-face {
   font-family: "Visby CF regular";
@@ -39,7 +44,7 @@
   width: 100%;
   overflow: hidden; /* Evita margens extras */
   position: relative;
-  background-color: #003ae2;
+  /* background-color: #003ae2; */
   /* border: 2px solid red; */
 }
 
@@ -131,10 +136,6 @@
   /* border: 2px solid yellow; */
 }
 
-#about {
-  background-color: #003ae2;
-}
-
 .slogan {
   font-family: "Visby CF regular";
   font-weight: lighter;
@@ -213,14 +214,26 @@
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
   font-family: "Visby CF demibold";
   color: #0099ff;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.hl-title {
+  font-family: "Visby CF demibold";
+  color: #0099ff;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .default-paragraph {
@@ -235,25 +248,46 @@ h2 {
   /* border: 2px solid red; */
 }
 
-.swiper-container {
+.carousel-container {
   width: 100%;
   /* border: 2px solid red; */
   overflow: hidden;
 }
 
-.swiper-slide {
+.carousel-item {
   /* width: 100px; */
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
   gap: 10px;
-  padding: 0px 40px;
+  /* padding: 0px 40px; */
   /* border: 2px solid red; */
   height: auto;
 }
 
+.description-box {
+  width: 100%;
+  padding: 0px 40px;
+  /* border: 2px solid red; */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
 .carousel-logo {
+  margin: 20px 0px;
   width: 80px;
   height: 80px;
   /* border: 2px solid yellow; */
@@ -263,7 +297,8 @@ h2 {
   font-family: "Visby CF demibold";
   color: #ffff;
   font-size: 14px;
-  white-space: nowrap;
+  text-align: center;
+  /* white-space: nowrap; */
 }
 
 .carousel-header {
@@ -280,6 +315,173 @@ h2 {
   cursor: pointer;
 }
 
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #002aa8;
+  white-space: nowrap;
+  padding: 30px 0px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.6)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+.marquee-content {
+  display: flex;
+  width: fit-content; /* Ajusta automaticamente o tamanho do conteúdo */
+  animation: marquee 5s linear infinite;
+}
+
+.marquee-content img {
+  height: 60px; /* Ajuste conforme necessário */
+  margin-right: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.album-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 40px;
+  /* border: 2px solid red; */
+}
+
+swiper-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.album-item {
+  object-fit: contain;
+  width: 100%;
+}
+swiper-slide:not(.swiper-slide-active) img {
+  filter: brightness(50%); /* Deixa as imagens laterais mais escuras */
+  transition: filter 0.3s ease-in-out;
+}
+
+swiper-slide.swiper-slide-active img {
+  filter: brightness(100%); /* Mantém a imagem ativa normal */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  /* border: 2px solid red; */
+}
+
+.form-group {
+  width: 85%;
+  /* border: 2px solid red; */
+}
+
+#name,
+#email,
+#message {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: rgba(196, 196, 196, 0.1);
+  color: #fff;
+  opacity: 0.8;
+  font-family: "Visby CF regular";
+}
+
+#name::placeholder,
+#email::placeholder,
+#message::placeholder {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "Visby CF regular";
+}
+
+#name:focus,
+#email:focus,
+#message:focus {
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: none; /* Remove qualquer sombra */
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 30px;
+  border: none;
+  font-family: "Visby CF regular";
+  color: white;
+  background-color: #0099ff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.submit-btn::hover {
+  opacity: 0.5;
+}
+
+footer {
+  background-color: #002aa8;
+  padding: 40px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  /* border: 2px solid red; */
+  width: 100px;
+}
+
+.footer-txt {
+  font-family: "Visby CF regular";
+  color: #fff;
+  font-size: 8px;
+  opacity: 0.5;
+}
+
+#footer-img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+/* Animação Suave */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: auto;
@@ -294,5 +496,11 @@ h2 {
   }
   .info {
     font-size: 7px;
+  }
+  .carousel-header {
+    gap: 20px;
+  }
+  .description-box {
+    padding: 0px 10px;
   }
 }
