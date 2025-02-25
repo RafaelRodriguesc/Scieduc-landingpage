@@ -358,11 +358,11 @@ h5 {
   align-items: center;
   width: 100%;
   padding: 40px;
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 swiper-container {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   justify-content: center !important;
@@ -372,12 +372,12 @@ swiper-container {
 
 swiper-slide {
   width: 100% !important;
-  max-width: 350px; /* Isso evita que fiquem muito pequenos */
-  margin: 0 auto !important;
+  margin: 0px auto !important;
+  border: 2px solid red;
 }
 
 .album-item {
-  object-fit: cover;
+  object-fit: contain;
   width: 100% !important;
   max-width: 100%;
   height: auto;
