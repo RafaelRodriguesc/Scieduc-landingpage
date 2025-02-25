@@ -372,35 +372,34 @@ swiper-container {
 
 swiper-wrapper {
   display: flex;
-  width: 100%;
+  transition: transform 0.3s ease; /* Para transição suave */
 }
 
 swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10px; /* Ajuste do espaçamento entre os slides */
-  width: calc(50% - 10px); /* Exibe dois slides por vez */
+  margin: 0 10px;
+  width: 100%; /* Mantenha a largura padrão para os slides */
   position: relative;
   transition: transform 0.3s ease, z-index 0.3s ease;
-  z-index: 1; /* Define a ordem dos slides */
 }
 
 .album-item {
   object-fit: contain;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.8); /* Dá o efeito de "redução" nas imagens laterais */
-  z-index: 0; /* Coloca as imagens não ativas "atrás" */
+  transform: scale(0.85); /* Reduz as imagens laterais */
+  z-index: 0; /* Coloca as imagens laterais atrás */
 }
 
 swiper-slide.swiper-slide-active {
   transform: scale(1); /* Aumenta a imagem ativa */
-  z-index: 2; /* Coloca a imagem ativa "na frente" */
+  z-index: 2; /* Coloca a imagem ativa na frente */
 }
 
 swiper-slide:not(.swiper-slide-active) img {
@@ -532,5 +531,20 @@ footer {
   }
   .description-box {
     padding: 0px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  swiper-slide {
+    width: 90%; /* Ajusta o tamanho para que fique mais "visível" */
+  }
+
+  .album-item {
+    max-width: 100%;
+    width: 100%; /* As imagens devem ocupar toda a largura disponível */
+  }
+
+  swiper-slide:not(.swiper-slide-active) {
+    transform: scale(0.7); /* Reduz ainda mais as imagens laterais */
   }
 }
