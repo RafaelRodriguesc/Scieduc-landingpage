@@ -367,7 +367,7 @@ swiper-container {
   display: flex;
   justify-content: center !important;
   align-items: center !important;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 swiper-slide {
