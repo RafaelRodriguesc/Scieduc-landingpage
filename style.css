@@ -513,3 +513,21 @@ footer {
     padding: 0px 10px;
   }
 }
+/* Ajuste para dispositivos pequenos como iPhone SE */
+@media (max-width: 375px) {
+  swiper-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Esconde qualquer overflow das imagens ao lado */
+  }
+  swiper-slide {
+    display: flex; /* Certifica-se de que os slides se alinham corretamente */
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Garante que as imagens sejam centralizadas dentro do slide */
+    margin: 0 auto;
+    padding: 0 10px; /* Pode adicionar algum padding lateral para controle */
+  }
+}
