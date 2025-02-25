@@ -376,12 +376,13 @@ swiper-slide {
   justify-self: center;
   align-items: center;
   margin: 0px auto;
-  padding: 0 10px;
+  padding: 0 20px;
+  width: 100%;
 }
 
 .album-item {
   object-fit: contain;
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
   height: auto;
 }
