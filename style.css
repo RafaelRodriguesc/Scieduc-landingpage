@@ -82,8 +82,8 @@ body {
   right: 0rem;
   top: 60px;
   width: 100%;
-  background: rgba(0, 153, 255, 0.9);
-  border-radius: 10px;
+  background: #02217d;
+  border-radius: 0px;
   transition: height 0.2s ease-in-out;
 }
 
@@ -142,9 +142,10 @@ body {
   font-weight: lighter;
   color: #ffff;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 30px 0px;
   opacity: 0.9;
+  white-space: nowrap;
   /* border: 2px solid red; */
 }
 
@@ -154,7 +155,7 @@ body {
 
 .statistics-ilustration {
   position: relative;
-  padding: 5px;
+  padding: 0px;
   display: flex;
   justify-content: center;
   opacity: 0.8;
@@ -192,6 +193,7 @@ body {
   font-family: "Visby CF medium";
   font-size: 8px;
   color: #ffff;
+
   /* border: 2px solid white; */
 }
 
@@ -214,11 +216,8 @@ body {
   object-fit: contain;
 }
 
-h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   font-family: "Visby CF demibold";
   color: #0099ff;
   font-size: 1.25rem;
@@ -239,13 +238,12 @@ h5 {
 
 .default-paragraph {
   font-family: "Visby CF regular";
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.45;
   color: #ffff;
   text-align: center;
   opacity: 0.8;
-  padding: 10px 0px;
-  /* padding: 5px 50px; */
+  padding: 10px 40px;
   /* border: 2px solid red; */
 }
 
@@ -256,20 +254,17 @@ h5 {
 }
 
 .carousel-item {
-  /* width: 100px; */
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
   gap: 10px;
-  /* padding: 0px 40px; */
-  /* border: 2px solid red; */
   height: auto;
 }
 
 .description-box {
   width: 100%;
-  padding: 0px 40px;
+  /* padding: 0px 40px; */
   /* border: 2px solid red; */
   -webkit-mask-image: linear-gradient(
     to right,
@@ -360,10 +355,12 @@ h5 {
   padding: 0px 40px;
   margin-top: 40px;
   box-sizing: border-box;
+  /* border: 2px solid red; */
 }
 
 swiper-container {
   width: 100%;
+  max-width: 425px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -456,7 +453,7 @@ swiper-slide.swiper-slide-active img {
 }
 
 footer {
-  background-color: #002aa8;
+  background-color: #02217d;
   padding: 40px 20px;
   gap: 10px;
   display: flex;
@@ -498,6 +495,9 @@ footer {
   }
 }
 @media (min-width: 320px) and (max-width: 360px) {
+  .slogan {
+    font-size: 1.3rem;
+  }
   .hl-number {
     font-size: 14px;
   }
@@ -514,7 +514,7 @@ footer {
     padding: 0px 10px;
   }
 }
-/* Ajuste para dispositivos pequenos como iPhone SE */
+
 @media (max-width: 370px) {
   swiper-container {
     width: 100%;
@@ -530,5 +530,20 @@ footer {
     align-items: center; /* Garante que as imagens sejam centralizadas dentro do slide */
     margin: 0 auto;
     padding: 0 10px; /* Pode adicionar algum padding lateral para controle */
+  }
+}
+
+@media (min-widith: 375px) and (max-widith: 399px) {
+  .default-paragraph {
+    padding: 10px 40px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 480px) {
+  .hl-number {
+    font-size: 1.25rem;
+  }
+  .info {
+    font-size: 9px;
   }
 }
